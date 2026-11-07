@@ -1,0 +1,43 @@
+{
+  "name": "@auf/design-system",
+  "version": "0.1.0",
+  "description": "Algeria United Foundation ERP design system: tokens, Ant Design theme, RTL UI components and brand assets.",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "sideEffects": ["*.css"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
+    "./styles.css": "./dist/styles.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./brand/*": "./dist/brand/*",
+    "./fonts/*": "./dist/fonts/*"
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepare": "node scripts/build.mjs",
+    "demo": "vite --config demo/vite.config.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "peerDependencies": {
+    "@ant-design/icons": ">=5.6.0 <6",
+    "antd": ">=5.29.0 <6",
+    "react": ">=18.3.0 <19",
+    "react-dom": ">=18.3.0 <19"
+  },
+  "devDependencies": {
+    "@ant-design/icons": "5.6.1",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "@vitejs/plugin-react": "6.1.1",
+    "antd": "5.29.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "5.9.3",
+    "vite": "8.3.1"
+  }
+}
